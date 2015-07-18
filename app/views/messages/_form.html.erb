@@ -12,10 +12,21 @@
     </div>
   <% end %>
   
-    名前:
-    <%=f .text_field :name %>
+  <p>
+    <%= f.label :name, "氏名" %><br>
+    <%= f.text_field :name, :size=>"60" %>
+  </p>
+ 
+  <p>
+    <%= f.label :body, "内容" %><br>
+    <%= f.text_area :body, :size=>"60" %>
+  </p>
+    
+  <p>
+    <%= f.label :body, "年齢" %>
+    <%=f .text_field :age, :size=>"5" %>
+  </p>
+  
+  <%=f .submit class: "btn btn-sm btn-warning" %>
 
-    内容:
-    <%=f .text_field :body %>
-    <%=f .submit class: "btn btn-sm btn-warning" %>
 <% end %>
